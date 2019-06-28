@@ -1,0 +1,740 @@
+/* main part */
+body{
+    background: #F8F8F8;
+}
+header{
+    background: #4876C3;
+    display: block;
+    width:100%;
+}
+.head{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 88% 12%;
+}
+
+a{
+    color: #fff;
+    display: block;
+    height: 10px;
+    padding: 0 10px;
+    margin-top: 10px;
+    float: left;
+}
+.rmenu{
+    display:none;
+}
+a:hover{    
+    color: #fff;
+}
+p{
+    float: left;
+}
+.item{
+    height: 25px;
+    width: 25px;
+}
+.someSearch{
+    width: 1350px;
+    position: relative;
+    height: 50px;
+}
+.search-text{
+    margin-right: 340px;    
+    float: right;
+    margin-top: 7px;
+    width:663px;
+    height:35px;
+    border: 0;
+    padding-left: 30px;
+    animation: search-text 0.5s;
+}
+#search-button{
+    position: absolute;
+    left: 990px;
+    height:35px;
+    margin-top: 7px;
+    background:#FFC120;
+    color:white;
+    border: 0;
+
+}
+.someSearchDnone{
+    display: none;
+}
+.search-text-dnone{
+    display: none;
+}
+.search, #add{
+    height: 25px;
+    width: 25px;    
+}
+.someMenu{
+    margin-left: 350px;
+    
+}
+#add{
+    position: absolute;
+    left: 1062px;
+}
+.logo{
+    position: absolute;
+    float: left;
+    margin-left: 1%;
+    margin-top: 13px;
+    margin-right: 100px;
+}
+#mail, #notifications, #profile{
+    height: 25px;
+    width: 25px; 
+}
+#searchIcon{
+    color: #C3C3C3;
+    top: 15px;
+    position: absolute;
+    z-index: 1;
+    left: 357px;
+    animation: searchIcon 0.5s;
+}
+.clearSearch{
+    position: absolute;
+    margin-top: 8px;
+    height: 16px;
+    width: 16px; 
+    left: 970px;
+    opacity: 0.7;
+    z-index: 1;
+    animation: clearSearch 1s;
+
+}
+.search-text-dissapear{
+    opacity: 0;
+    position: absolute;
+    margin-top: 7px;
+    width:0px;
+    height: 35px;
+    padding-left: 30px;
+    animation: search-text-dissapear 0.5s;
+}
+@keyframes search-text{
+    from{
+        opacity: 0;
+        width: 0;
+    }
+    to{
+        opacity: 1;
+        width: 663px;
+    }
+}
+@keyframes search-text-dissapear{
+    from{
+        opacity: 1;
+        width: 643px;
+    }
+    to{
+        opacity: 0;
+        width: 0;
+    }
+}
+
+.searchForm{
+    top: 47px;
+    left: 349px;
+    background: white;
+    position: absolute;
+    padding: 15px;
+    width: 480px;
+    height: 200px;
+    border: 1px solid #E8E8E8;  
+    box-shadow: 0 0 5px #E8E8E8; /* Параметры тени */
+}
+.hide{
+    animation: clearSearch 1s;
+}
+.searchForm input[type=checkbox]{
+    -webkit-appearance: none;
+    position: absolute;
+    outline: none;
+
+}
+.searchForm input[type=text]{
+    border: 1.5px solid #D4D4D4;
+    opacity: 0.65;
+    width: 370px;
+    font-size: 13px;    
+    border-radius: 3px;
+}
+.searchForm input[type=checkbox]+ label:before{
+    content: "\2713";   
+    color: transparent; 
+    display: inline-block;
+    border: 2px solid #D4D4D4;
+    font-size: 16px;    
+    border-radius: 3px;
+    line-height: 22px;
+    margin: -5px 5px 0 0;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+.formSort select{
+    background-color: #F2F2F2;
+    opacity: 0.8;
+    border-radius: 3px;
+    height: 40px;
+    width: 150px;
+    font-size: 15px;
+    padding: 8px;
+    margin-left:15px; 
+}
+.searchForm input[type=checkbox]:checked + label:before {
+    color: #000;    
+}
+.searchForm input,.searchForm label{
+    padding: 10px;
+}
+.formCheck,.formSort{
+    margin-top: 10px;
+}
+.dnone{
+    display: none;
+}
+
+
+/* animation part */
+@keyframes searchIcon{
+    from{
+        opacity: .3;
+        left: 1000px;
+    }
+    to{
+        opacity: 1;
+        left: 357px;
+    }
+}
+@keyframes clearSearch{
+    from{
+        opacity: .3;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* media  part*/
+@media screen and (max-width: 1365px) {
+    
+    .someSearch{
+        width: 1200px;
+    }
+    .search-text{
+        margin-right: 189px;
+    }
+        
+}
+@media screen and (max-width: 1279px) {
+    .searchForm{
+        left: 306px;
+    }
+    .someMenu{
+        margin-left: 300px;
+    }
+    .someSearch{
+        width: 1090px;
+    }
+    .search-text{
+        width: 595px;
+    }
+    .clearSearch{
+        left: 881px;
+    }
+    #searchIcon{
+        left: 315px;
+    }
+    #search-button{
+        left: 900px;
+    }
+    a
+    {
+        padding: 0 7px;
+    }
+    #add{
+        left: 968px;
+    }
+    @keyframes search-text{
+        from{
+            opacity: .3;
+            width: 0;
+        }
+        to{
+            opacity: 1;
+            width: 595px;
+        }
+    }
+    @keyframes search-text-dissapear{
+        from{
+            opacity: 1;
+            width: 595px;
+        }
+        to{
+            opacity: 0;
+            width: 0;
+        }
+    }
+    @keyframes searchIcon{
+        from{
+            opacity: .3;
+            left: 1000px;
+        }
+        to{
+            opacity: 1;
+            left: 314px;
+        }
+    }
+    
+}
+@media screen and (max-width: 1199px) {
+    .mleft  a{
+        padding: 0 6px;
+    }
+    
+    .logo{
+        margin-right: 70px;
+    }
+    #add{
+        left: 960px;
+    }
+    .someSearch{
+        width: 1080px;
+    }
+    .search-text{
+        width: 585px;
+    }
+    .clearSearch{
+        left: 855px;
+    }
+    #search-button{
+        left: 880px;
+    }
+    @keyframes search-text{
+        from{
+            opacity: .3;
+            width: 0;
+        }
+        to{
+            opacity: 1;
+            width: 585px;
+        }
+    }
+    @keyframes search-text-dissapear{
+        from{
+            opacity: 1;
+            width: 585px;
+        }
+        to{
+            opacity: 0;
+            width: 0;
+        }
+    }
+    @keyframes searchIcon{
+        from{
+            opacity: .3;
+            left: 1000px;
+        }
+        to{
+            opacity: 1;
+            left: 314px;
+        }
+    }
+}
+@media screen and (max-width: 1151px) {
+    .searchForm{
+        left: 246px;
+    }
+    .mleft  a{
+        padding: 0 3px;
+    }
+    .logo{
+        margin-right: 40px;
+    }
+    #add{
+        left: 861px;
+    }
+    .someMenu{
+        margin-left: 245px;
+    }
+    .someSearch{
+        width: 985px;
+    }
+    .search-text{
+        width: 550px;
+    }
+    .clearSearch{
+        left: 775px;
+    }
+    #search-button{
+        left: 795px;
+    }
+    #searchIcon{
+        left: 255px;
+    }
+    @keyframes search-text{
+        from{
+            opacity: .3;
+            width: 0;
+        }
+        to{
+            opacity: 1;
+            width: 550px;
+        }
+    }
+    @keyframes search-text-dissapear{
+        from{
+            opacity: 1;
+            width: 550px;
+        }
+        to{
+            opacity: 0;
+            width: 0;
+        }
+    }
+    @keyframes searchIcon{
+        from{
+            opacity: .3;
+            left: 700px;
+        }
+        to{
+            opacity: 1;
+            left: 255px;
+        }
+    }
+}
+@media screen and (max-width: 1023px) {
+    .searchForm{
+        left: 225px;
+    }
+    .mleft  a{
+        padding: 0 2px;
+    }
+    #add{
+        left: 840px;
+    }
+    
+    .head{
+        grid-template-columns:87% 13%;
+    }
+    .someMenu{
+        margin-left: 220px;
+    }
+    .someSearch{
+        width: 945px;
+    }
+    .search-text{
+        width: 532px;
+    }
+    .clearSearch{
+        left: 735px;
+    }
+    #search-button{
+        left: 755px;
+    }
+    #searchIcon{
+        left: 232px;
+    }
+    #add{
+        left: 815px;
+    }
+    @keyframes search-text{
+        from{
+            opacity: .3;
+            width: 0;
+        }
+        to{
+            opacity: 1;
+            width: 532px;
+        }
+    }
+    @keyframes search-text-dissapear{
+        from{
+            opacity: 1;
+            width: 532px;
+        }
+        to{
+            opacity: 0;
+            width: 0;
+        }
+    }
+    @keyframes searchIcon{
+        from{
+            opacity: .3;
+            left: 700px;
+        }
+        to{
+            opacity: 1;
+            left: 232px;
+        }
+    }
+}
+@media screen and (max-width: 959px) {
+    .searchForm{
+        left: 12px;
+    }
+    .hider,#add,.hide
+    {
+        display: none;
+    }
+    .someSearch{
+        width: 854px;
+    }
+    #search-button{
+        left: 743px;
+    }
+    .clearSearch{
+        left: 720px;
+    }
+    .search-text{
+        width: 732px;
+        margin-right: 110px;
+    }
+    #searchIcon{
+        left: 20px;
+    }
+    .head-height{
+        height: 100px;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+    }
+
+    .rmenu{
+        display:block;
+        width:28px;
+        height:28px;
+        margin-left:23px;
+    }
+    .search{
+        position: absolute;
+        right: 35px;
+    }
+    #mail, #notifications, #profile{
+        position: absolute;
+    }
+    #mail{
+        left: 25%;
+    }
+    #notifications{
+        left: 50%;
+    }
+    #profile{
+        left: 75%;
+    }
+    .search-text-dissapear{
+        opacity: 0;
+        position: absolute;
+        margin-top: 7px;
+        width:0px;
+        left: 16px;
+        height: 35px;
+        padding-left: 30px;
+        animation: search-text-dissapear 0.5s;
+    }
+    @keyframes search-text{
+        from{
+            opacity: .3;
+            width: 0;
+        }
+        to{
+            opacity: 1;
+            width: 732px;
+        }
+    }
+    @keyframes search-text-dissapear{
+        from{
+            opacity: 1;
+            width: 732px;
+        }
+        to{
+            opacity: 0;
+            width: 0;
+        }
+    }
+    @keyframes searchIcon{
+        from{
+            opacity: .3;
+            left: 700px;
+        }
+        to{
+            opacity: 1;
+            left: 20px;
+        }
+    }
+}
+@media screen and (max-width: 853px) {
+    .someSearch{
+        width: 704px;
+    }
+    .search-text{
+        margin-right: 39px;
+        width: 653px;
+    }
+    .clearSearch{
+        left: 645px;
+    }
+    #search-button{
+        left: 665px;
+    }
+    @keyframes search-text{
+        from{
+            opacity: .3;
+            width: 0;
+        }
+        to{
+            opacity: 1;
+            width: 653px;
+        }
+    }
+    @keyframes search-text-dissapear{
+        from{
+            opacity: 1;
+            width: 653px;
+        }
+        to{
+            opacity: 0;
+            width: 0;
+        }
+    }
+}
+@media screen and (max-width: 799px) {
+    
+    #search-button{
+        left: 624px;
+    }
+    .clearSearch{
+        left: 605px;
+    }
+}
+@media screen and (max-width: 719px) {
+    .someSearch{
+        width: 480px;
+    }
+    .search-text{
+        margin-right: -27px;
+        width: 495px;
+    }
+    #search-button{
+        left: 506px;
+    }
+    #searchIcon{
+        left: 20px;
+    }
+    .clearSearch{
+        left: 487px;
+    }
+    @keyframes search-text{
+        from{
+            opacity: .3;
+            width: 0;
+        }
+        to{
+            opacity: 1;
+            width: 495px;
+        }
+    }
+    @keyframes search-text-dissapear{
+        from{
+            opacity: 1;
+            width: 495px;
+        }
+        to{
+            opacity: 0;
+            width: 0;
+        }
+    }
+    @keyframes searchIcon{
+        from{
+            opacity: .3;
+            left: 500px;
+        }
+        to{
+            opacity: 1;
+            left: 20px;
+        }
+    }
+}
+@media screen and (max-width: 639px) {
+    .searchForm{
+        width: 275px;
+        height: 390px;
+    }
+    .searchForm input[type=text] {
+        width: 235px;
+    }
+    .search-text{
+        margin-right: 74px;
+        width: 395px;
+    }
+    #search-button{
+        left: 405px;
+    }
+    .clearSearch{
+        left: 385px;
+    }
+    @keyframes search-text{
+        from{
+            opacity: .3;
+            width: 0;
+        }
+        to{
+            opacity: 1;
+            width: 395px;
+        }
+    }
+    @keyframes search-text-dissapear{
+        from{
+            opacity: 1;
+            width: 395px;
+        }
+        to{
+            opacity: 0;
+            width: 0;
+        }
+    }
+}
+@media screen and (max-width: 479px) {
+    .someSearch{
+        width: 300px;
+    }
+    .search-text{
+        width: 250px;
+        margin-right: 38px;
+    }
+    .clearSearch{
+        left: 241px;
+    }
+    #search-button{
+        left: 258px;
+    }
+    @keyframes search-text{
+        from{
+            opacity: .3;
+            width: 0;
+        }
+        to{
+            opacity: 1;
+            width: 250px;
+        }
+    }
+    @keyframes search-text-dissapear{
+        from{
+            opacity: 1;
+            width: 250px;
+        }
+        to{
+            opacity: 0;
+            width: 0;
+        }
+    }
+}
